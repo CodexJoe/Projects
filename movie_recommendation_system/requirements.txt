@@ -1,6 +1,6 @@
 pandas
 scikit-learn
-matplotlib
+matplotlib==3.4.1
 wordcloud
 seaborn
 nltk
