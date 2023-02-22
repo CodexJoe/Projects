@@ -1,0 +1,7 @@
+pandas
+scikit-learn
+matplotlib
+wordcloud
+seaborn
+nltk
+streamlit==1.17.0
