@@ -2,16 +2,18 @@ import streamlit as st
 st.set_option('deprecation.showPyplotGlobalUse', False) #To ignore streamlit warning 
 from PIL import Image
 import pandas as pd
+!pip install matplotlib
 from matplotlib import pyplot as plt
 from wordcloud import WordCloud
 import seaborn as sns
 import numpy as np
 import time
+!pip install nltk
 import rake_nltk
 from rake_nltk import Rake
 import nltk
-# nltk.download('stopwords')
-# nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('punkt')
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 import warnings
