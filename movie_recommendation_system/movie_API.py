@@ -10,8 +10,8 @@ import time
 import rake_nltk
 from rake_nltk import Rake
 import nltk
-# nltk.download('stopwords')
-# nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('punkt')
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 import warnings
