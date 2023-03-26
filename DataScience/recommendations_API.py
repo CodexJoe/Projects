@@ -10,8 +10,8 @@ import time
 import rake_nltk
 from rake_nltk import Rake
 import nltk
-# nltk.download('stopwords')
-# nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('punkt')
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 import warnings
@@ -132,9 +132,9 @@ def main():
 #     ind = indices[indices == 'ganglands'].index[0]
     
 #     c_sim_series = pd.Series(c_sim[2]).sort_values(ascending = False) # Using the fatched movie index number to sort its corresponding cosine similarity matrix in decending order
-#     top_15 = list(c_sim_series.iloc[1:16].index) # Fatches the top 15 highest cosine similarity
-# # recommended_movies = [i[0] for i in top_15]
-#     st.write(df[['title']].iloc[top_15])
+#     top_5 = list(c_sim_series.iloc[1:6].index) # Fatches the top 15 highest cosine similarity
+# # recommended_movies = [i[0] for i in top_5]
+#     st.write(df[['title']].iloc[top_5])
     def recommendation(movie_name):
 
                        
@@ -147,10 +147,10 @@ def main():
         else:
             c_sim_series = list(enumerate(c_sim[ind])) # Converting the cosine similarity matrix to indexed list
             c_sim_series = sorted(c_sim_series, key = lambda x:x[1], reverse = True) #sorting corresponding cosine similarity matrix in decending order
-            top_15 = c_sim_series[1:16] # Fatches the top 15 highest cosine similarity
+            top_5 = c_sim_series[1:6] # Fatches the top 5 highest cosine similarity
 
     
-            recommended_movies = [i[0] for i in top_15] # iterating over the index of the top 15 list and storing it as recommended_movies
+            recommended_movies = [i[0] for i in top_5] # iterating over the index of the top 5 list and storing it as recommended_movies
                                 # recommended_movies.append(list(movies.index)[i]) # appending the movie names
             return df[['title', 'director', 'description']].iloc[recommended_movies]
         
