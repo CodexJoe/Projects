@@ -124,8 +124,8 @@ def main():
     c_sim = cosine_similarity(cv_matrix, cv_matrix) # checking similarity amongest itselves
     # st.write(c_sim[10]) # show similarity of movie in row 6 to all other movies
                 
-            # st.write('--------------------------------------------------------------')
-        # st.write('This alogrithm will recommend 15 movies from over 8804 listed movies')
+    st.write('--------------------------------------------------------------')
+    st.write('This alogrithm will recommend 5 movies from over 8804 listed movies')
                 
             # if st.checkbox('Recommend Movies'):
     indices = pd.Series(movies.index) # Creating indices for each movie title
