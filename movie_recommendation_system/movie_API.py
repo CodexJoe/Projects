@@ -147,10 +147,10 @@ def main():
         else:
             c_sim_series = list(enumerate(c_sim[ind])) # Converting the cosine similarity matrix to indexed list
             c_sim_series = sorted(c_sim_series, key = lambda x:x[1], reverse = True) #sorting corresponding cosine similarity matrix in decending order
-            top_15 = c_sim_series[1:16] # Fatches the top 15 highest cosine similarity
+            top_5 = c_sim_series[1:6] # Fatches the top 5 highest cosine similarity
 
     
-            recommended_movies = [i[0] for i in top_15] # iterating over the index of the top 15 list and storing it as recommended_movies
+            recommended_movies = [i[0] for i in top_5] # iterating over the index of the top 5 list and storing it as recommended_movies
                                 # recommended_movies.append(list(movies.index)[i]) # appending the movie names
             return df[['title', 'director', 'description']].iloc[recommended_movies]
         
