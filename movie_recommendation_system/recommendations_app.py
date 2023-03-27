@@ -9,7 +9,7 @@ import seaborn as sns
 import numpy as np
 import time
 # !pip install nltk
-import rake_nltk
+# import rake_nltk
 from rake_nltk import Rake
 import nltk
 nltk.download('stopwords')
@@ -22,7 +22,7 @@ warnings.filterwarnings('ignore')
 
 st.title('Content-Based Movies Recommendation System')
 
-img = Image.open('movie_recommendation_system/Flix_img.png')
+img = Image.open('Flix_img.png')
 st.image(img, use_column_width= True)
 
 st.header('The project will using Netflix listed movies title to recommend other similar movies for a user that searches a particular movie title')

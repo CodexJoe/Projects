@@ -1,0 +1,46 @@
+.row-2 {
+    width: 80%;
+    height: 90vh;
+    display: flex;
+}
+
+.figure {
+    width: 55%;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+img {
+    height: 100%;
+}
+
+.desciption {
+
+}
+
+.rec-cont {
+    margin: 20px;
+    width: 100%;
+    height: 300px;   
+}
+
+h2 {
+    margin-top: 60px;
+}
+.row {
+    display: flex;
+    height: 100%;
+}
+.col {
+    width: 33%;
+    height: 100%;
+}
+
+figure {
+    width: 100%;
+    height: 100%;
+}
+.img {
+    width: 100%;
+    height: 100%;
+}

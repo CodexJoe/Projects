@@ -20,7 +20,7 @@ warnings.filterwarnings('ignore')
 
 st.title('Content-Based Movies Recommendation System')
 
-img = Image.open('movie_recommendation_system/Flix_img.png')
+img = Image.open('Flix_img.png')
 st.image(img, use_column_width= True)
 
 st.header('MOVIES RECOMMENDATION SYSTEM')
@@ -32,6 +32,7 @@ def main():
     st.subheader('This API uses Netflix listed movies title to recommend other similar movies for a user that searches a particular movie title')
 
     df = pd.read_csv('https://raw.githubusercontent.com/CodexJoe/Projects/main/movie_recommendation_system/netflix_titles.csv')
+    df = df[df['country'] == 'Nigeria']
     df['rating'] = df['rating'].fillna(df['rating'].mode()[0])
     df['duration'] = df['duration'].fillna(df['duration'].mode()[0])
     df['date_added'] = df['date_added'].fillna(df['date_added'].mode()[0])
@@ -148,5 +149,4 @@ def main():
    
        
 if __name__=='__main__':
-
-    main()  
+    main()
